@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nv_f"
+    app:startDestination="@id/homeFragment2">
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="com.mastercodint.noteify.ui.Fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_creatNotesFragment2"
+            app:destination="@id/creatNotesFragment2" />
+        <action
+            android:id="@+id/action_homeFragment2_to_editNoteFragment"
+            app:destination="@id/editNoteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/creatNotesFragment2"
+        android:name="com.mastercodint.noteify.ui.Fragments.CreatNotesFragment"
+        android:label="fragment_creat_notes"
+        tools:layout="@layout/fragment_creat_notes" >
+        <action
+            android:id="@+id/action_creatNotesFragment2_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_creatNotesFragment2_to_homeFragment22"
+            app:destination="@id/homeFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment"
+        android:name="com.mastercodint.noteify.ui.Fragments.EditNoteFragment"
+        android:label="fragment_edit_note"
+        tools:layout="@layout/fragment_edit_note" >
+        <action
+            android:id="@+id/action_editNoteFragment_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <argument
+            android:name="data"
+            app:argType="com.mastercodint.noteify.Notes" />
+    </fragment>
+</navigation>
